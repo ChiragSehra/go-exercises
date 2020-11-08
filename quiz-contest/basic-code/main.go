@@ -27,7 +27,7 @@ func main() {
 
 	for i := 0; i < len(records); i++ {
 		// Printing the question
-		fmt.Println("What is the answer of: ", records[i][0])
+		fmt.Println("Problem #", i+1, "->", records[i][0])
 
 		// taking answer input as int
 		var answer int
@@ -44,5 +44,6 @@ func main() {
 			correctCount = correctCount + 1
 		}
 	}
-	fmt.Println("total correct answers are: ", correctCount)
+	// fmt.Println(reflect.TypeOf(records).String())
+	fmt.Println("You scored ", correctCount, "out of ", len(records))
 }
